@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "OwnAdmin\\TeamSpeak3\\": "src/"
         }
     },
     "config": {
