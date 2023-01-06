@@ -5,8 +5,6 @@ namespace OwnAdmin\TeamSpeak3;
 use Exception;
 use TeamSpeak3;
 use TeamSpeak3_Adapter_Abstract;
-use TeamSpeak3_Node_Abstract;
-use TeamSpeak3_Node_Host;
 use TeamSpeak3_Node_Server;
 
 class TeamSpeak3Manager
@@ -29,13 +27,10 @@ class TeamSpeak3Manager
     }
 
     /**
-     * @return TeamSpeak3_Adapter_Abstract
-     * @return TeamSpeak3_Node_Abstract
-     * @return TeamSpeak3_Node_Host
-     * @return TeamSpeak3_Node_Server
+     * @return TeamSpeak3_Adapter_Abstract|TeamSpeak3_Node_Server
      * @throws Exception
      */
-    public static function connect($uri): TeamSpeak3_Node_Server
+    public static function connect($uri)
     {
         return TeamSpeak3::factory($uri);
     }
