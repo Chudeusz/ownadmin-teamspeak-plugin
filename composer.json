@@ -13,11 +13,12 @@
     "require": {
         "php": ">=7.4",
         "ext-http": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "planetteamspeak/ts3-php-framework": "^1.1"
     },
     "autoload": {
         "psr-4": {
-            "OwnAdmin\\TeamSpeak3\\": "src/"
+            "OwnAdmin\\": "src/OwnAdmin"
         }
     },
     "config": {
@@ -27,5 +28,9 @@
         "phpcs": "vendor/bin/phpcs -n -s -p --standard=PSR12 src/",
         "phpcbf": "vendor/bin/phpcbf -n -s -p --standard=PSR12 src/",
         "phpunit": "vendor/bin/phpunit -c phpunit.xml --do-not-cache-result --log-junit report.xml"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.4"
     }
 }
