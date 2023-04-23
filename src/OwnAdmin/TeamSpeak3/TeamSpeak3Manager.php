@@ -3,9 +3,8 @@
 namespace OwnAdmin\TeamSpeak3;
 
 use Exception;
-use TeamSpeak3;
-use TeamSpeak3_Adapter_Abstract;
-use TeamSpeak3_Node_Server;
+use PlanetTeamSpeak\TeamSpeak3Framework\Node\Server;
+use PlanetTeamSpeak\TeamSpeak3Framework\TeamSpeak3;
 
 class TeamSpeak3Manager
 {
@@ -27,7 +26,7 @@ class TeamSpeak3Manager
     }
 
     /**
-     * @return TeamSpeak3_Adapter_Abstract|TeamSpeak3_Node_Server
+     * @return Server
      * @throws Exception
      */
     public static function connect($uri)
